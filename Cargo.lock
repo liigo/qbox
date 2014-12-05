@@ -1,0 +1,18 @@
+[root]
+name = "qbox"
+version = "0.0.1"
+dependencies = [
+ "fmt 0.0.1 (git+https://github.com/liigo/fmt-rs.git#1fde175db83ab147ad4ab3b7594fac530e71c0dd)",
+ "rust-hl-lua 0.1.0 (git+https://github.com/tomaka/rust-hl-lua#1bc367f1473ea45dbb21e8effde3d6af7ecb5abf)",
+]
+
+[[package]]
+name = "fmt"
+version = "0.0.1"
+source = "git+https://github.com/liigo/fmt-rs.git#1fde175db83ab147ad4ab3b7594fac530e71c0dd"
+
+[[package]]
+name = "rust-hl-lua"
+version = "0.1.0"
+source = "git+https://github.com/tomaka/rust-hl-lua#1bc367f1473ea45dbb21e8effde3d6af7ecb5abf"
+
