@@ -8,3 +8,7 @@ git = "https://github.com/liigo/fmt-rs"
 
 [dependencies.rust-hl-lua]
 git = "https://github.com/tomaka/rust-hl-lua"
+
+[dependencies.mysql]
+git = "https://github.com/blackbeam/rust-mysql-simple"
+default-features = false

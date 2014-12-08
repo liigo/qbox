@@ -1,6 +1,8 @@
 #![feature(slicing_syntax)]
+#![feature(if_let)]
 
 extern crate fmt;
+extern crate mysql;
 extern crate "rust-hl-lua" as lua;
 
 use std::io::{TcpListener, TcpStream};
@@ -11,6 +13,7 @@ use lua::Lua;
 use lua_cache::LuaCache;
 
 mod lua_cache;
+mod db;
 
 struct Conn<'a> {
     stream: &'a mut TcpStream,
@@ -30,6 +33,7 @@ fn main() {
     let pool = TaskPool::new(4);
     let listener = TcpListener::bind("0.0.0.0:8001");
     let mut acceptor = listener.listen();
+    db::have_a_try_to_mysql();
     for stream in acceptor.incoming() {
         match stream {
             Ok(mut stream) => {

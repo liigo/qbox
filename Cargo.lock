@@ -2,8 +2,9 @@
 name = "qbox"
 version = "0.0.1"
 dependencies = [
- "fmt 0.0.1 (git+https://github.com/liigo/fmt-rs.git#1fde175db83ab147ad4ab3b7594fac530e71c0dd)",
- "rust-hl-lua 0.1.0 (git+https://github.com/tomaka/rust-hl-lua#1bc367f1473ea45dbb21e8effde3d6af7ecb5abf)",
+ "fmt 0.0.1 (git+https://github.com/liigo/fmt-rs.git)",
+ "mysql 0.1.0 (git+https://github.com/blackbeam/rust-mysql-simple)",
+ "rust-hl-lua 0.1.0 (git+https://github.com/tomaka/rust-hl-lua)",
 ]
 
 [[package]]
@@ -12,7 +13,34 @@ version = "0.0.1"
 source = "git+https://github.com/liigo/fmt-rs.git#1fde175db83ab147ad4ab3b7594fac530e71c0dd"
 
 [[package]]
+name = "gcc"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "lazy_static"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "mysql"
+version = "0.1.0"
+source = "git+https://github.com/blackbeam/rust-mysql-simple#8cf72183b33ba346a222dff6d989cfad3e6b589e"
+dependencies = [
+ "lazy_static 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "time 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "rust-hl-lua"
 version = "0.1.0"
 source = "git+https://github.com/tomaka/rust-hl-lua#1bc367f1473ea45dbb21e8effde3d6af7ecb5abf"
+
+[[package]]
+name = "time"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "gcc 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
 
